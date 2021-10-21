@@ -368,7 +368,7 @@ $(document).ready(() => {
 
             $.ajax({
                 type: 'post',
-                url: 'mail.php',
+                url: 'telegram.php',
                 data: {
                     name: name.val(), service: service.val(), date: date.val(), phone: phone.val(),
                     serviceName: serviceName.val(), serviceTime: serviceTime.val()
@@ -396,7 +396,7 @@ $(document).ready(() => {
 
 //кнопка в хедере
 
-    $('.call-open-form').click(() => {
+    $('.call-open-form, .price-button > button').click(() => {
 
         $('#form-phone-container').css('display', 'flex').addClass("btn-onl");
 
@@ -431,7 +431,7 @@ $(document).ready(() => {
 
             $.ajax({
                 type: 'post',
-                url: 'mail.php',
+                url: 'telegram.php',
                 data: {callHeader: callHeader.val()},
 
                 success: () => {
@@ -477,7 +477,7 @@ $(document).ready(() => {
 
             $.ajax({
                 type: 'post',
-                url: '../mail2.php',
+                url: 'telegram.php',
                 data: {phone: callPresent.val()},
 
                 success: () => {
@@ -526,7 +526,7 @@ $(document).ready(() => {
 
             $.ajax({
                 type: 'post',
-                url: '../mail2.php',
+                url: 'telegram.php',
                 data: {phone: callPhone.val()},
 
                 success: () => {
